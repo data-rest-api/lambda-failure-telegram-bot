@@ -1,5 +1,5 @@
 import { main } from './main'
-import { Event } from './types'
+import type { Event } from './types'
 
 export const failureTelegramBotHandler = async (
   event: Event,
