@@ -3,8 +3,8 @@
 
 #### Environment Variables
 ```
-TELEGRAM_BOT_NAME = 'instagram-puppeteer'
-TELEGRAM_USER_NAME = 'InstagramPuppeteerBot'
+TELEGRAM_BOT_NAME = '{{bot_name}}'
+TELEGRAM_USER_NAME = '{{user_name}}'
 TELEGRAM_TOKEN = '{{token}}'
 TELEGRAM_CHANNEL_ID = '{{channel_id}}'
 ```
