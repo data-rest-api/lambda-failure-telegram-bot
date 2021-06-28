@@ -1,12 +1,8 @@
 import { main } from './main'
 import { Event } from './types'
 
-process.env.NTBA_FIX_319 = '1'
-
-/**
- * Startup
- */
-// eslint-disable-next-line import/no-commonjs
-exports.handler = async (event: Event) => {
+export const failureTelegramBotHandler = async (
+  event: Event,
+): Promise<void> => {
   await main(event)
 }
