@@ -1,0 +1,89 @@
+{
+	"overrides": [
+		{
+			"files": [
+				"./src/**/*.test.ts"
+			],
+			"parser": "@typescript-eslint/parser",
+			"plugins": [
+				"prettier",
+				"import",
+				"unicorn",
+				"@typescript-eslint"
+			],
+			"parserOptions": {
+				"project": "./tsconfig.json",
+				"sourceType": "module"
+			},
+			"extends": [
+				"@sanv/eslint-config-base",
+				"@sanv/eslint-config-typescript",
+				"@sanv/eslint-config-tests",
+				"@sanv/eslint-config-tests-typescript",
+				"@sanv/eslint-config-unicorn",
+				"@sanv/eslint-config-unicorn-typescript",
+				"@sanv/eslint-config-import",
+				"@sanv/eslint-config-import-typescript",
+				"plugin:prettier/recommended",
+				"prettier/@typescript-eslint"
+			],
+			"rules": {
+				"jest/no-try-expect": "off",
+				"no-underscore-dangle": "off",
+				"no-magic-numbers": "off",
+				"unicorn/no-process-exit": "off",
+				"import/unambiguous": "off",
+				"padding-line-between-statements": "off",
+				"no-console": "off",
+				"import/newline-after-import": "off",
+				"no-use-before-define": "off",
+				"import/no-nodejs-modules": "off",
+				"import/no-unresolved": "off",
+				"@typescript-eslint/no-use-before-define": "off",
+				"@typescript-eslint/no-explicit-any": "off",
+				"@typescript-eslint/no-magic-numbers": "off"
+			}
+		},
+		{
+			"files": [
+				"./src/**/*.ts"
+			],
+			"parser": "@typescript-eslint/parser",
+			"plugins": [
+				"prettier",
+				"import",
+				"unicorn",
+				"@typescript-eslint"
+			],
+			"parserOptions": {
+				"project": "./tsconfig.json",
+				"sourceType": "module"
+			},
+			"extends": [
+				"@sanv/eslint-config-base",
+				"@sanv/eslint-config-typescript",
+				"@sanv/eslint-config-unicorn",
+				"@sanv/eslint-config-unicorn-typescript",
+				"@sanv/eslint-config-import",
+				"@sanv/eslint-config-import-typescript",
+				"plugin:prettier/recommended",
+				"prettier/@typescript-eslint"
+			],
+			"rules": {
+				"no-underscore-dangle": "off",
+				"no-magic-numbers": "off",
+				"unicorn/no-process-exit": "off",
+				"import/unambiguous": "off",
+				"padding-line-between-statements": "off",
+				"no-console": "off",
+				"import/newline-after-import": "off",
+				"no-use-before-define": "off",
+				"import/no-nodejs-modules": "off",
+				"import/no-unresolved": "off",
+				"@typescript-eslint/no-use-before-define": "off",
+				"@typescript-eslint/no-explicit-any": "off",
+				"@typescript-eslint/no-magic-numbers": "off"
+			}
+		}
+	]
+}

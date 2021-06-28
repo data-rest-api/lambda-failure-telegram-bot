@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"module": "commonjs",
+		"sourceMap": true,
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"strict": true,
+		"paths": {
+			"api/*": ["./app/api/*"],
+			"app/*": ["./app/*"],
+			"configs/*": ["./configs/*"],
+			"helpers/*": ["./helpers/*"],
+			"lib/*": ["./lib/*"]
+		},
+		"baseUrl": "./src",
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true
+	},
+	"include": [
+		"./src/**/*.ts",
+		"./src/**/*.test.ts"
+	]
+}
