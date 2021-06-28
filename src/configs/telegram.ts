@@ -1,4 +1,4 @@
-import { ConfigurationException } from '@awesome-typescript/crawler-exceptions'
+import { ConfigurationException } from '@awesome-typescript/exceptions'
 
 import telegram from './telegram.json'
 
