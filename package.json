@@ -1,90 +1,76 @@
 {
-	"name": "@data-rest-api/lambda-failure-telegram-bot",
-	"description": "@data-rest-api/lambda-failure-telegram-bot",
-	"version": "1.0.0",
-	"author": "sander.vergeles",
-	"license": "ISC",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/data-rest-api/lambda-failure-telegram-bot.git"
-	},
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-	"scripts": {
-		"start": "npm run start:prod",
-		"start:dev": "npm run build:dev && node ./dist/index.js",
-		"start:prod": "npm run build:prod && node ./dist/index.js",
-		"test": "npm run eslint && npm run prettier:lint && npm run test:jest",
-		"test:jest": "jest ./src --coverage --forceExit",
-		"lint": "npm run eslint && npm run prettier:lint",
-		"eslint": "eslint ./src",
-		"prettier": "prettier --write ./src/**/**.ts",
-		"prettier:lint": "prettier --check ./src/**/**.ts",
-		"clean": "rimraf dist",
-		"build:dev": "npm run clean && cross-env NODE_ENV=development webpack",
-		"build:prod": "npm run clean && cross-env NODE_ENV=production webpack",
-		"build:tsc:prod": "npm run clean && tsc --moduleResolution node --project tsconfig.json",
-		"commit": "npx git-cz",
-		"precommit": "lint-staged",
-		"build": "npm run build:prod",
-		"rimraf": "rimraf dist"
-	},
-	"dependencies": {
-		"@awesome-typescript/exceptions": "1.0.0",
-		"@awesome-typescript/telegram-push-notification": "1.0.0",
-		"ramda": "0.27.0"
-	},
-	"devDependencies": {
-		"@commitlint/cli": "8.3.5",
-		"@commitlint/config-conventional": "8.3.4",
-		"@sanv/eslint-config-base": "2.0.1",
-		"@sanv/eslint-config-import": "2.0.1",
-		"@sanv/eslint-config-import-typescript": "2.0.3",
-		"@sanv/eslint-config-tests": "2.0.3",
-		"@sanv/eslint-config-tests-typescript": "2.0.3",
-		"@sanv/eslint-config-typescript": "2.1.1",
-		"@sanv/eslint-config-unicorn": "2.0.1",
-		"@sanv/eslint-config-unicorn-typescript": "2.0.3",
-		"@types/jest": "26.0.15",
-		"@types/node": "14.10.2",
-		"@types/ramda": "0.27.0",
-		"@typescript-eslint/eslint-plugin": "4.6.1",
-		"@typescript-eslint/parser": "4.6.1",
-		"cross-env": "7.0.2",
-		"cz-conventional-changelog": "3.0.2",
-		"eslint": "7.3.1",
-		"eslint-config-airbnb-base": "14.2.1",
-		"eslint-config-prettier": "6.15.0",
-		"eslint-import-resolver-typescript": "2.3.0",
-		"eslint-plugin-import": "2.22.1",
-		"eslint-plugin-jest": "24.1.0",
-		"eslint-plugin-prettier": "3.1.4",
-		"happypack": "5.0.1",
-		"husky": "4.2.5",
-		"jest": "26.6.1",
-		"lint-staged": "10.2.2",
-		"prettier": "2.0.5",
-		"rimraf": "3.0.2",
-		"terser-webpack-plugin": "4.2.3",
-		"ts-jest": "26.4.2",
-		"ts-loader": "8.0.4",
-		"typescript": "3.9.5",
-		"webpack": "4.44.2",
-		"webpack-cli": "3.3.12",
-		"webpack-node-externals": "2.5.2"
-	},
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com/"
-	},
-	"engines": {
-		"node": ">=8"
-	},
-	"config": {
-		"commitizen": {
-			"path": "cz-conventional-changelog"
-		}
-	},
-	"eslintConfig": {
-		"extends": "./.eslintrc.json"
-	}
+ "name": "@data-rest-api/lambda-failure-telegram-bot",
+ "description": "@data-rest-api/lambda-failure-telegram-bot",
+ "version": "1.0.0",
+ "author": "sander.vergeles",
+ "license": "ISC",
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/data-rest-api/lambda-failure-telegram-bot.git"
+ },
+ "main": "dist/index.js",
+ "types": "dist/index.d.ts",
+ "scripts": {
+  "test": "npm run eslint && npm run prettier:lint && npm run test:jest",
+  "test:jest": "jest ./src --coverage",
+  "lint": "npm run eslint && npm run prettier:lint",
+  "eslint": "eslint ./src",
+  "prettier": "prettier --write ./src/**/**.ts",
+  "prettier:lint": "prettier --check ./src/**/**.ts",
+  "clean": "rimraf dist",
+  "build": "npm run clean && tsc --project tsconfig.json",
+  "commit": "npx git-cz",
+  "precommit": "lint-staged"
+ },
+ "dependencies": {
+  "@awesome-typescript/exceptions": "1.0.0",
+  "@awesome-typescript/telegram-push-notification": "1.0.0",
+  "ramda": "0.27.0"
+ },
+ "devDependencies": {
+  "cross-env": "7.0.2",
+  "@commitlint/cli": "8.3.5",
+  "@commitlint/config-conventional": "8.3.4",
+  "@sanv/eslint-config-base": "2.0.1",
+  "@sanv/eslint-config-import": "2.0.1",
+  "@sanv/eslint-config-import-typescript": "2.0.3",
+  "@sanv/eslint-config-tests": "2.0.3",
+  "@sanv/eslint-config-tests-typescript": "2.0.3",
+  "@sanv/eslint-config-typescript": "2.1.1",
+  "@sanv/eslint-config-unicorn": "2.0.1",
+  "@sanv/eslint-config-unicorn-typescript": "2.0.3",
+  "@types/jest": "26.0.15",
+  "@types/node": "14.10.2",
+  "@typescript-eslint/eslint-plugin": "4.6.1",
+  "@typescript-eslint/parser": "4.6.1",
+  "cz-conventional-changelog": "3.0.2",
+  "eslint": "7.3.1",
+  "eslint-config-airbnb-base": "14.2.1",
+  "eslint-config-prettier": "6.15.0",
+  "eslint-import-resolver-typescript": "2.3.0",
+  "eslint-plugin-import": "2.22.1",
+  "eslint-plugin-jest": "24.1.0",
+  "eslint-plugin-prettier": "3.1.4",
+  "husky": "4.2.5",
+  "jest": "26.6.1",
+  "lint-staged": "10.2.2",
+  "prettier": "2.0.5",
+  "rimraf": "3.0.2",
+  "ts-jest": "26.4.2",
+  "typescript": "3.9.5"
+ },
+ "publishConfig": {
+  "registry": "https://npm.pkg.github.com/"
+ },
+ "engines": {
+  "node": ">=8"
+ },
+ "config": {
+  "commitizen": {
+   "path": "cz-conventional-changelog"
+  }
+ },
+ "eslintConfig": {
+  "extends": "./.eslintrc.json"
+ }
 }
