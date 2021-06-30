@@ -13,9 +13,8 @@ const createTelegramMessageFacade = async (event: Event): Promise<void> => {
   await telegramBot.pushInfoMessage(
     truncate(
       '\n ' +
-        '\n ' +
-        '\n ' +
         '----------------' +
+        '\n ' +
         `Date UTC: ${new Date().toISOString()}` +
         '\n ' +
         `Date Estonia: ${new Date().toLocaleString('en-GB', {
@@ -43,6 +42,7 @@ const createTelegramMessageFacade = async (event: Event): Promise<void> => {
         `Message: ${event.message}` +
         '\n' +
         `Stack: ${event.stack}` +
+        '\n' +
         '\n',
       4000,
     ),
