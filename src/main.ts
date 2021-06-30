@@ -12,8 +12,10 @@ const createTelegramMessageFacade = async (event: Event): Promise<void> => {
   // Telegram push message
   await telegramBot.pushInfoMessage(
     truncate(
-      '----' +
+      '\n ' +
         '\n ' +
+        '\n ' +
+        '----------------' +
         `Date UTC: ${new Date().toISOString()}` +
         '\n ' +
         `Date Estonia: ${new Date().toLocaleString('en-GB', {
