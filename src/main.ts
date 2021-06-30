@@ -32,17 +32,16 @@ const createTelegramMessageFacade = async (event: Event): Promise<void> => {
         '\n' +
         `Function start: ${event.timestamp}` +
         '\n' +
-        `Function requestContext: ${JSON.stringify(event.requestContext)}` +
+        `RequestId: ${event.requestId}` +
         '\n' +
-        '---' +
+        `Error Type: ${event.errorType}` +
         '\n' +
-        `Prev. Function date: ${event.requestPayload.timestamp}` +
+        `Status: ${event.status}` +
         '\n' +
-        `Prev. Function requestContext: ${JSON.stringify(
-          event.requestPayload.requestContext,
-        )}` +
+        `Message: ${event.message}` +
         '\n' +
-        `Function exception: ${JSON.stringify(event.responsePayload)}`,
+        `Stack: ${event.stack}` +
+        '\n',
       4000,
     ),
   )

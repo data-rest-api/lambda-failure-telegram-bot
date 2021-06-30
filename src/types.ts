@@ -1,22 +1,8 @@
 export type Event = {
-  version: string
+  requestId: string
   timestamp: string
-  requestContext: {
-    requestId: string
-    functionArn: string
-    condition: string
-    approximateInvokeCount: number
-  }
-  requestPayload: any
-  responsePayload: ErrorResponseType
-  responseContext: {
-    statusCode: number
-    executedVersion: string
-  }
-}
-
-type ErrorResponseType = {
   errorType: string
-  errorMessage: string
-  trace: string[]
+  status: number
+  message: string
+  stack: string
 }
